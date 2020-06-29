@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ### terraform-helm-release-prometheus-operator
 Description:
 -
@@ -16,3 +17,7 @@ module "release-prometheus-operator" {
   grafana_adminPassword  = "pa$$w0rd"
 
 }
+=======
+![Terraform CI](https://github.com/OpenQAI/terraform-helm-release-prometheus-operator/workflows/Terraform%20CI/badge.svg?branch=master)
+# terraform-helm-release-prometheus-operator
+>>>>>>> 5f8c3620374bd662c202676c496ae952e642a03a
