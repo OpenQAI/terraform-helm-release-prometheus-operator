@@ -18,3 +18,4 @@ module "release-prometheus-operator" {
   var.grafana_adminPassword  = "pa$$w0rd"
 
 }
+```
