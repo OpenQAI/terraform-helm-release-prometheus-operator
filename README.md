@@ -1,4 +1,4 @@
-![Terraform](https://github.com/OpenQAI/terraform-helm-release-prometheus-operator/workflows/Terraform%20CI/badge.svg?branch=master)
+![Lint](https://github.com/OpenQAI/terraform-helm-release-prometheus-operator/workflows/Lint/badge.svg?branch=master)
 ### terraform-helm-release-prometheus-operator
 
 Description:
