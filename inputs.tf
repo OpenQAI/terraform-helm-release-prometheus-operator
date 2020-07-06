@@ -24,7 +24,7 @@ variable "defaultRules_general" {
 
 variable "defaultRules_create" {
   description = "Create default rules for monitoring the cluster"
-  default = true
+  default     = true
 }
 
 variable "defaultRules_PrometheusOperator" {

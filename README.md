@@ -3,15 +3,17 @@
 
 Description:
 -
-This TF module allows the prometheus-operator deployment. 
+Deploys prometheus-operator helm chart. 
 
-Usage:
--
+Usage: 
+- Deploy prometheus-operator without the default rules)
+
 ```
 module "release-prometheus-operator" {
   source  = "OpenQAI/release-prometheus-operator/helm"
   version = "0.0.X"
-  
+
+  defaultRules_create    = false
   helm_chart_version     = "8.15.6"
   helm_chart_namespace   = "monitoring"
   skip_crds              =  false
@@ -19,6 +21,25 @@ module "release-prometheus-operator" {
   
 }
 ```
+
+Usage
+- Deploy prometheus-operator with Grafana 7.0.3 and specified password in the namespace `monitoring`
+
+```
+module "release-prometheus-operator" {
+  source  = "OpenQAI/release-prometheus-operator/helm"
+  version = "0.0.X"
+
+  helm_chart_version     = "8.15.6"
+  helm_chart_namespace   = "monitoring"
+  skip_crds              =  false
+  grafana_image_tag      = "7.0.3"
+  grafana_adminPassword  = "pa$$w0rd"
+  
+}
+```
+
+
 
 ## Inputs
 
