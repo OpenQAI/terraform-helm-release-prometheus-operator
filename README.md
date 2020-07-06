@@ -1,4 +1,4 @@
-![Terraform](https://github.com/OpenQAI/terraform-helm-release-prometheus-operator/workflows/Terraform%20CI/badge.svg?branch=master)
+![Lint](https://github.com/OpenQAI/terraform-helm-release-prometheus-operator/workflows/Lint/badge.svg?branch=master)
 ### terraform-helm-release-prometheus-operator
 
 Description:
@@ -12,10 +12,17 @@ module "release-prometheus-operator" {
   source  = "OpenQAI/release-prometheus-operator/helm"
   version = "0.0.X"
 
+<<<<<<< HEAD
   var.helm_chart_version     = "8.15.11"
   var.helm_chart_namespace   = "monitoring"
   var.skip_crds              =  false
   var.grafana_adminPassword  = "pa$$w0rd"
+=======
+  helm_chart_version     = "8.15.6"
+  helm_chart_namespace   = "monitoring"
+  skip_crds              =  false
+  grafana_adminPassword  = "pa$$w0rd"
+>>>>>>> a44ab2489005efa437434b82e6e1e2b7864a4241
 
 }
 ```

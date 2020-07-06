@@ -1,4 +1,4 @@
-name: Terraform CI
+name: Lint
 
 on: 
   push:
