@@ -1,5 +1,6 @@
 # General rules
 defaultRules:
+    create: ${defaultRules_create}
     rules:
         general: ${defaultRules_general}
         PrometheusOperator: ${defaultRules_PrometheusOperator}

@@ -1,7 +1,7 @@
 # Helm Chart
 variable "helm_chart_version" {
   description = "Helm chart version"
-  default     = "8.15.6"
+  default     = "8.15.11"
 }
 variable "helm_chart_name" {
   description = "Helm chart name"
@@ -21,6 +21,12 @@ variable "create_namespace" {
 variable "defaultRules_general" {
   default = true
 }
+
+variable "defaultRules_create" {
+  description = "Create default rules for monitoring the cluster"
+  default = true
+}
+
 variable "defaultRules_PrometheusOperator" {
   default = true
 }

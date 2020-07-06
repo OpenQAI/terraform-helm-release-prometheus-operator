@@ -15,6 +15,7 @@ resource "helm_release" "prometheus-operator" {
       helm_chart_version                              = var.helm_chart_version
       helm_chart_name                                 = var.helm_chart_name
       helm_chart_namespace                            = var.helm_chart_namespace
+      defaultRules_create                             = var.defaultRules_create
       defaultRules_general                            = var.defaultRules_general
       defaultRules_PrometheusOperator                 = var.defaultRules_PrometheusOperator
       defaultRules_alertmanager                       = var.defaultRules_alertmanager
