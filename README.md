@@ -1,12 +1,29 @@
 ![Lint](https://github.com/OpenQAI/terraform-helm-release-prometheus-operator/workflows/Lint/badge.svg?branch=master)
 ### terraform-helm-release-prometheus-operator
+Installs prometheus-operator to create/configure/manage Prometheus clusters atop Kubernetes. This chart includes multiple components and is suitable for a variety of use-cases.
+
+The default installation is intended to suit monitoring a kubernetes cluster the chart is deployed onto. It closely matches the kube-prometheus project.
+
+- prometheus-operator
+- prometheus
+- alertmanager
+- node_exporter
+- kube-state-metrics
+- grafana 
+- service-monitors
+    - kube-apiserver
+    - kube-scheduler
+    - kube-controller-manager
+    - etcd
+    - kube-dns/coredns
+    - kube-proxy
 
 Description:
 -
 Deploys prometheus-operator helm chart. 
 
 Usage: 
-- Deploy prometheus-operator without the default rules)
+- Deploy prometheus-operator without the default rules
 
 ```
 module "release-prometheus-operator" {
@@ -14,7 +31,7 @@ module "release-prometheus-operator" {
   version = "0.0.X"
 
   defaultRules_create    = false
-  helm_chart_version     = "8.15.6"
+  helm_chart_version     = "8.15.11"
   helm_chart_namespace   = "monitoring"
   skip_crds              =  false
   grafana_adminPassword  = "pa$$w0rd"
@@ -22,7 +39,6 @@ module "release-prometheus-operator" {
 }
 ```
 
-Usage
 - Deploy prometheus-operator with Grafana 7.0.3 and specified password in the namespace `monitoring`
 
 ```
@@ -30,7 +46,7 @@ module "release-prometheus-operator" {
   source  = "OpenQAI/release-prometheus-operator/helm"
   version = "0.0.X"
 
-  helm_chart_version     = "8.15.6"
+  helm_chart_version     = "8.15.11"
   helm_chart_namespace   = "monitoring"
   skip_crds              =  false
   grafana_image_tag      = "7.0.3"
